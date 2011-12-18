@@ -1,0 +1,13 @@
+<html>
+    <body>
+       <p>
+           tes dulu cui
+       </p>
+       {%for artikel in artikels %}
+            <h2>
+                <a href="{% url blog_baca artikel.id %} "> {{artikel.judul}}</a>
+            </h2></br>Diposting {{artikel.tgl_post|timesince}} yang lalu.
+            <p>{{artikel.isi|truncatewords:20}}</p>
+       {% endfor %}
+    </body>
+</html>
